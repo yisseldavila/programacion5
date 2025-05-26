@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de Precios y Simulador</title>
+</head>
+<body background="movies.jpg">
+<center>
+  <h2><font color="white">Tabla de Precios</font></h2>
+  <table border="2" cellpadding="8" bgcolor="#444444">
+    <tr>
+      <th><font color="white">Tipo de Función / Descuento</font></th> //Font color se utiliza para especificar el color del texto
+      <th><font color="white">Precio</font></th>
+    </tr>
+    <tr>
+      <td><font color="white">Función 2D - General</font></td>
+      <td><font color="white">$12.00</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Función 3D - General</font></td>
+      <td><font color="white">$16.00</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Función IMAX - General</font></td>
+      <td><font color="white">$20.00</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Sala VIP - General</font></td>
+      <td><font color="white">$25.00</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Descuento Estudiante</font></td>
+      <td><font color="white">15%</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Descuento Niños (≤12 años)</font></td>
+      <td><font color="white">20%</font></td>
+    </tr>
+    <tr>
+      <td><font color="white">Descuento Adultos Mayores (≥65 años)</font></td>
+      <td><font color="white">25%</font></td>
+    </tr>
+  </table>
+
+  <h2><font color="white">Fresita Cinema - Simulador de Entradas</font></h2>
+
+  <form action="procesar.php" method="POST">
+    <label for="nombre"><font color="white">Nombre completo:</font></label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="edad"><font color="white">Edad:</font></label><br>
+    <input type="number" id="edad" name="edad" min="1" required><br><br>
+
+    <label for="tipo_funcion"><font color="white">Tipo de función:</font></label><br> //label representa una etiqueta
+    <select id="tipo_funcion" name="tipo_funcion" required>
+      <option value="2d">Función 2D</option>
+      <option value="3d">Función 3D</option>
+      <option value="imax">Función IMAX</option>
+      <option value="vip">Sala VIP</option>//define el valor que define el servidor
+    </select><br><br>
+
+    <input type="checkbox" id="estudiante" name="estudiante">
+    <label for="estudiante"><font color="white">Soy estudiante (con credencial vigente)</font></label><br><br>
+
+    <input type="submit" value="CALCULAR PRECIO DEL BOLETO">
+  </form>
+</center>   
+</body>
+</html>
